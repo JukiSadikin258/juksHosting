@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS Hosting</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="bg-primary fixed w-screen border-b ">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-white"><span class="text-sec">J</span>Hosting</a>
+                </div>
+
+                <!-- Hamburger Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-white focus:outline-none">
+                        <svg class="h-7 w-7 my-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path class="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-10">
+
+                    <!-- Hosting Dropdown -->
+                    <div class="relative group">
+                        <button class="text-white hover:text-sec hover:border-b-2 pb-1 border-sec flex items-center">
+                            Layanan
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute hidden group-hover:block w-48 border-cover bg-white border shadow-lg">
+                            <a href="web.html" class="block px-4 py-2 text-gray-800 hover:border-b border-primary hover:text-primary">Web Hosting</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:border-b border-primary hover:text-primary">VPS Hosting</a>
+                            <a href="cloud.html" class="block px-4 py-2 text-gray-800 hover:border-b border-primary hover:text-primary">Cloud Hosting</a>
+                        </div>
+                    </div>
+                    
+                    
+                    <a href="#tentang" class="text-white hover:text-sec hover:border-b-2 pb-1 border-sec">Tentang</a>
+                    <a href="#bantuan" class="text-white hover:text-sec hover:border-b-2 pb-1 border-sec">Bantuan</a>
+                </div>
+
+                <!-- Desktop Buttons -->
+                <div class="hidden md:flex space-x-4">
+                    <div class="text-white border-2 border-wtext-white font-semibold text-sm px-4 py-1 rounded-sm">MASUK</div>
+                    <div class="text-primary bg-white font-semibold border-2 border-wbg-white text-sm px-4 py-1 rounded-sm">MULAI GRATIS</div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <div class="relative">
+                        <button onclick="toggleDropdown('layanan-dropdown')" class="w-full px-3 py-2 text-white hover:text-sec flex items-center justify-between hover:border-b-2 pb-1 border-sec">
+                            Layanan
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="layanan-dropdown" class="hidden px-4 py-2 bg-white">
+                            <a href="web.html" class="block py-2 text-black hover:border-b-2 border-primary hover:text-primary">Web Hosting</a>
+                            <a href="#" class="block py-2 text-black hover:border-b-2 border-primary hover:text-primary">VPS Hosting</a>
+                            <a href="cloud.html" class="block py-2 text-black hover:border-b-2 border-primary hover:text-primary">Cloud Hosting</a>
+                        </div>
+                    </div>
+                    <a href="#tentang" class="block px-3 py-2 text-white hover:text-sec hover:border-b-2 pb-1 border-sec">Tentang</a>
+                    <a href="#bantuan" class="block px-3 py-2 text-white hover:text-sec hover:border-b-2 pb-1 border-sec">Bantuan</a>
+                    <div class="flex space-x-2 px-3 py-2">
+                        <div class="text-white border-2 border-wtext-white font-semibold text-sm px-4 py-1 rounded-sm w-1/2 text-center">MASUK</div>
+                        <div class="text-primary bg-white font-semibold border-2 border-white text-sm px-4 py-1 rounded-sm w-1/2 text-center">MULAI GRATIS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-white px-1 md:px-8 py-12">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center">
+            <div class="w-full md:w-1/2 py-12 md:py-16">
+                <div class="text-center md:text-left">
+                    <p class="text-primary text-lg md:text-xl">Diskon <span class="text-three">70%</span> VPS Hosting</p>
+                    <h2 class="text-3xl md:text-5xl text-primary font-semibold mb-8 max-w-lg md:max-w-full">VPS Hosting untuk Power dan Kontrol Lebih Besar</h2>
+
+                    <ul class="mb-6 text-primary inline-block items-center md:text-base ">
+                        <li class="flex items-center text-primary">
+                            <svg class="w-5 h-5 text-three mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Gratis real-time snapshot
+                        </li>
+                        <li class="flex items-center text-primary">
+                            <svg class="w-5 h-5 text-three mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Gratis real-time snapshot
+                        </li>
+                        <li class="flex items-center text-primary">
+                            <svg class="w-5 h-5 text-three mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            AI Assistant
+                        </li>
+                    </ul>
+
+                    <div class="text-primary">
+                        <span>Rp</span>
+                        <span class="text-4xl md:text-5xl font-bold text-three">126.000</span>
+                        <span>/bln</span>
+                    </div>
+                    <p class="text-base md:text-lg text-three mb-6">+2 bulan gratis</p>
+                    <a href="#paket" class="bg-white text-primary font-semibold py-2 md:py-3 px-6 md:px-8 rounded-full border-2 border-primary hover:bg-primary hover:text-white">
+                        Berlangganan Sekarang
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 mt-6 pt-8 md:py-20">
+                <img src="/img/programmer.svg" alt="" class="w-1/2 md:w-96 mx-auto">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pricing Section -->
+    <div id="paket" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800">Pilih paket hosting yang pas untuk Anda</h2>
+                <p class="text-gray-600 mt-4">Mulai tanpa ragu dengan jaminan 30 hari uang kembali. Bebas risiko.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">KVM 1</h3>
+                        <span>Cocok untuk kamu yang mau nyoba hosting website</span>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold text-primary">Rp 86.000</span>
+                            <span class="text-gray-600">/bulan</span>
+                        </div>
+                        <ul class="mt-8 space-y-4">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            1 vCPU core
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                14 GB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                50 GB NVMe disk space
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Sistem operasi Linux
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4">
+                        <button class="w-full py-3 text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">Pilih Paket</button>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 border-2 border-primary">
+                    <div class="text-white text-center bg-primary border-cover">PALING POPULER!</div>
+                    <div class="px-8 py-7">
+                        <h3 class="text-2xl font-bold text-gray-800">KVM 2</h3>
+                        <span>Cocok untuk personal branding atau blog Anda</span>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold text-primary">Rp 126.000</span>
+                            <span class="text-gray-600">/bulan</span>
+                        </div>
+                        <ul class="mt-8 space-y-4">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                2 vCPU core
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                8 GB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                100 GB NVMe disk space
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Sistem operasi Linux
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4">
+                        <button class="w-full py-3 bg-primary text-white rounded-lg border-2 border-primary hover:bg-white hover:text-primary transition">Pilih Paket</button>
+                    </div>
+                </div>
+
+                <!-- Executive Plan -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">KVM 4</h3>
+                        <span>Paket lengkap untuk bisnis, portal berita, atau toko online</span>
+                        <div class="mt-4">
+                            <span class="text-4xl font-bold text-primary">Rp 158.000</span>
+                            <span class="text-gray-600">/bulan</span>
+                        </div>
+                        <ul class="mt-8 space-y-4">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                4 vCPU core
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                16 GB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                200 GB NVMe disk space
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Sistem operasi Linux
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4">
+                        <button class="w-full py-3 text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">Pilih Paket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- tentang -->
+    <div id="tentang"  class="p-2 md:p-16">
+        <h2 class="text-3xl font-bold text-gray-800 text-center">Keunggulan VPS Hosting dari <span class="text-sec">J</span>Hosting</h2>
+        <div class="flex flex-col md:flex-row gap-4 my-10 md:gap-10 justify-between ">
+                <div class="bg-white md:w-1/2 p-4 rounded-lg border border-primary">
+                    <h3 class="text-2xl font-semibold mb-10 text-primary">Kecepatan 1000 Mb/dtk</h3>
+                    <p>Infrastruktur kami yang terhubung dengan fiber menyediakan kecepatan network 1000 Mb/dtk untuk pelanggan VPS hosting, jaminan uptime, dan loading website super cepat. Sangat cocok untuk gaming, streaming, dan proyek yang membutuhkan kecepatan tinggi.</p>
+                </div>
+
+                <div class="bg-white md:w-1/2 p-4 rounded-lg border border-primary">
+                    <h3 class="text-2xl font-semibold mb-10 text-primary">Backup dan Snapshot</h3>
+                    <p>Data website pasti aman dengan backup mingguan otomatis. Mau merombak website? Anda bisa buat snapshot secara manual dengan mudah. Jika terjadi error, Anda bisa kembali ke versi sebelumnya dalam beberapa menit</p>
+                </div>
+        </div>
+
+
+        <div class=" bg-primary mx-auto p-10 rounded-lg">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-10 justify-center ">
+                    <div class="bg-white md:w-[320px] p-4 rounded-lg shadow-md">
+                        <div class="">
+                            <h3 class="my-4 text-xl text-primary font-semibold">Data center lokal di seluruh dunia</h3>
+                            <p class="my-4 text-gray-600">Data center Hostinger berlokasi di Asia, Eropa, Amerika Utara, dan Amerika Selatan. Pilih server yang paling dekat dengan lokasi Anda.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white md:w-[320px] p-4 rounded-lg shadow-md">
+                        <div class="">
+                            <h3 class="my-4 text-xl text-primary font-semibold">VPS Hosting untuk Anda</h3>
+                            <p class="my-4 text-gray-600">Kami selalu hadir untuk mendukung bisnis dan proyek Anda. Upgrade ke paket VPS hosting apabila Anda butuh resource lebih besar untuk server Anda. Caranya mudah! Cukup klik paket yang diinginkan dan selesaikan pembayaran.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white md:w-[320px] p-4 rounded-lg shadow-md">
+                        <div class="">
+                            <h3 class="my-4 text-xl text-primary font-semibold">AI Assistant</h3>
+                            <p class="my-4 text-gray-600">AI Assistant kami serba bisa, mulai dari instal WordPress hingga konfigurasi firewall. AI Assistant adalah solusi terbaik untuk mempermudah pengelolaan VPS Anda.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- FAQ Section -->
+    <div id="bantuan" class="py-20 bg-white ">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800">Frequently Asked Questions</h2>
+                <p class="text-gray-600 mt-4">Temukan jawaban dari pertanyaan yang sering ditanyakan</p>
+            </div>
+
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="border bg-gray-50 rounded-lg">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-left">Apa itu VPS? Apa itu KVM dan keunggulannya?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="hidden p-4 pt-0 text-gray-600 bg-gray-50">
+                        VPS (Virtual Private Server) memvirtualisasi kernel, network card, disk, dan adaptor grafisnya sendiri. VPS menjalankan sistem operasi dan memiliki resource sendiri termasuk CPU, RAM, storage, dan bandwidth.<br>
+
+                        JHosting menyediakan layanan self-managed VPS dengan teknologi KVM (Kernel-based Virtual Machine). KVM adalah teknologi virtualisasi yang mengubah VPS menjadi server yang sepenuhnya independen, memberikan Anda resource, virtual space isolation, dan server yang lebih optimal untuk proyek Anda. Pilihan tepat untuk web developer yang membutuhkan fleksibilitas dan power lebih untuk proyek mereka.
+                        <br>
+
+                        Dengan KVM VPS hosting, Anda bisa memiliki kontrol penuh untuk memilih OS, control panel, and software sesuai kebutuhan Anda. Sementara Anda bertanggung jawab atas VPS Anda, kami akan mengurus server fisik Anda untuk memastikan kecepatan, uptime, dan stabilitasnya.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border bg-gray-50 rounded-lg">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-left">Apakah VPS dengan teknologi KVM aman?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="hidden p-4 pt-0 text-gray-600 bg-gray-50">
+                        Tentu saja. VPS kami dilengkapi proteksi DDoS dan AI firewall canggih yang terintegrasi dengan server super aman. Setiap pelanggan KVM VPS akan mendapatkan alamat IP sendiri. Dengan begitu, Anda bisa mengatur firewall di alamat IP Anda untuk meningkatkan keamanannya.
+                        <br>Tak hanya itu, Anda akan mendapatkan pendeteksi malware yang secara otomatis akan mendeteksi dan menghapus file berbahaya
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border bg-gray-50 rounded-lg">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-left">Dimana saja lokasi server JHosting?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="hidden p-4 pt-0 text-gray-600 bg-gray-50">
+                        Server kami tersebar di seluruh dunia. Selama proses setup, Anda bisa memilih lokasi server yang paling dekat dengan pengguna Anda untuk performa website yang lebih optimal. Karena lokasi server untuk setiap paket hosting berbeda, pastikan untuk mengecek lokasi server JHosting sebelum memlih paket hosting.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border bg-gray-50 rounded-lg">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-left">Apakah saya akan dibantu terkait penggunaan VPS hosting?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="hidden p-4 pt-0  text-gray-600 bg-gray-50">
+                        Karena kami menyediakan layanan self-managed VPS hosting, Anda memiliki akses penuh untuk mengelola dan mengatur server virtual Anda. Untuk mempermudah manajemen dan konfigurasi server, kami menyediakan:
+                        <ul>
+                            <li class="pb-1">1. dashboard dan template VPS yang mudah digunakan.</li>
+                            <li class="pb-1">2. Tutorial JHosting untuk informasi lengkap tentang VPS.</li>
+                            <li class="pb-1">3. Panduan lengkap dan cepat.</li>
+                            <li class="pb-1">4. Video tutorial.</li>
+                            <li class="pb-1">6. AI assistant, untuk menjawab pertanyaan Anda seputar konfigurasi dan pengelolaan server Anda.</li>
+                        </ul>
+                        <br>Untuk pertanyaan umum seputar paket VPS hosting, seperti cara membeli paket VPS hosting, Anda bisa menghubungi tim Customer Success kami via live chat 24/7.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <!-- Upper Footer -->
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-sec">J</span>Hosting</h3>
+                    <p class="text-gray-400 mb-4">Solusi hosting terbaik untuk kesuksesan website Anda.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Web Hosting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">VPS Hosting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Cloud Hosting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Domain</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Bantuan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Tutorial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Knowledge Base</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            support@jhosting.com
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            +62 821-2345-6789
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lower Footer -->
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-sm">
+                        © 2024 JHosting. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Existing FAQ toggle function
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('svg');
+            
+            content.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
